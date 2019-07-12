@@ -15,7 +15,7 @@
 
 部署步骤
 1. 首先使用```git clone https://github.com/yangchnet/AHNUReserve.git```把代码clone到你的服务器上
-    ![clone](clone.png)
+    ![clone](https://github.com/yangchnet/AHNUReserve/blob/master/img/clone.png?raw=true)
 
 2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取)）
     ```Python
@@ -60,7 +60,7 @@
 1. 登录自己的QQ邮箱
 
 2. 点击邮箱中的【设置】，进入【帐户】栏，下拉你会看见如下的截图
-    ![smtp](../img/smtp.png)
+    ![smtp](https://github.com/yangchnet/AHNUReserve/blob/master/img/smtp.png?raw=true)
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）
-    ![send message](../img/massage.png)
+    ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
     
