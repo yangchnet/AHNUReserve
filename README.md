@@ -42,9 +42,9 @@
     logging.basicConfig(filename='***.log', level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
     ```
     将这里filename后的值改成你想要日志保存的位置，**注意需要使用绝对路径**。  
-    
-4. 修改权限
-    使用```chmod +x Reserve.py```修改Reserve.py的运行权限
+     
+4. 修改权限  
+    使用```chmod +x Reserve.py```修改Reserve.py的运行权限  
     
 5. 使用crontab进行定时运行  
     使用```crontab -l```命令查看当前用户的定时任务  
@@ -69,4 +69,4 @@
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）  
     ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
     
-**有用请点星，欢迎fork**
+**有用请给个STAR，欢迎Fork**
