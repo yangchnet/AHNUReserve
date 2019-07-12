@@ -1,8 +1,6 @@
 # AHNUReserve
 > 使用Python爬虫完成图书馆自动预约座位（安徽师范大学敬文图书馆）
 
-[![Build status](https://ci.appveyor.com/api/projects/status/69iwhe2g11t30sj8/branch/master?svg=true)](https://ci.appveyor.com/project/HTBox/allready/branch/master)
-
 ### 服务器部署
 服务器环境
 * Ubuntu16.04
