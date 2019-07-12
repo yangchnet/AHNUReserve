@@ -65,3 +65,4 @@
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）  
     ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
     
+**有用请点星，欢迎fork**
