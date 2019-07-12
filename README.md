@@ -24,7 +24,7 @@
     account = '*******'
     # 密码
     password = '******'
-    # 座位编号（要从网页端报文查看）
+    # 座位编号（要从网页端报文查看，不是我们平常看到的nbk360等格式）
     sid = '******'
     # 邮件接收者
     to_user = '**********'
@@ -39,6 +39,7 @@
     ```
 3. 修改日志位置  
     ```Python
+    # 第8行
     logging.basicConfig(filename='***.log', level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
     ```
     将这里filename后的值改成你想要日志保存的位置，**注意需要使用绝对路径**。  
