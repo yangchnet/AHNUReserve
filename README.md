@@ -42,7 +42,11 @@
     logging.basicConfig(filename='***.log', level=logging.INFO, format=' %(asctime)s - %(levelname)s- %(message)s')
     ```
     将这里filename后的值改成你想要日志保存的位置，**注意需要使用绝对路径**。  
-3. 使用crontab进行定时运行  
+    
+4. 修改权限
+    使用```chmod +x Reserve.py```修改Reserve.py的运行权限
+    
+5. 使用crontab进行定时运行  
     使用```crontab -l```命令查看当前用户的定时任务  
     使用```crontab -e```命令编辑文件来新建任务  
     其格式为```minute (m), hour (h), day of month (dom), month (mon),and day of week (dow)， commond```, 使用```*```表示任意值
