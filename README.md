@@ -18,7 +18,6 @@
     ![clone](https://github.com/yangchnet/AHNUReserve/blob/master/img/clone.png?raw=true)
 
 2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取)）  
-<<<<<<< HEAD
 	```Python
 	info = {
         # 账号
@@ -57,7 +56,6 @@
 	```
 
 3. 使用crontab进行定时运行  
-=======
     ```Python
     # 73行附近
     # 账号
@@ -88,7 +86,6 @@
     使用```chmod +x Reserve.py```修改Reserve.py的运行权限  
     
 5. 使用crontab进行定时运行  
->>>>>>> 757ee52bb03e511a87bb82c44ea59ae3c0324a40
     使用```crontab -l```命令查看当前用户的定时任务  
     使用```crontab -e```命令编辑文件来新建任务  
     其格式为```minute (m), hour (h), day of month (dom), month (mon),and day of week (dow)， commond```, 使用```*```表示任意值
@@ -111,9 +108,4 @@
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）  
     ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
     
-<<<<<<< HEAD
-
-**有用请点星，欢迎fork**
-=======
 **有用请给个STAR，欢迎Fork**
->>>>>>> 757ee52bb03e511a87bb82c44ea59ae3c0324a40
