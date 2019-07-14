@@ -9,7 +9,7 @@
 * requests
 * json
 * smtplib
-* time
+* datetime
 * email
 * logging
 
@@ -18,6 +18,46 @@
     ![clone](https://github.com/yangchnet/AHNUReserve/blob/master/img/clone.png?raw=true)
 
 2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取)）  
+<<<<<<< HEAD
+	```Python
+	info = {
+        # 账号
+        'account': '',
+        # 密码
+        'password': '',
+        # 座位编号（要从网页端报文查看）
+        'sid': '',
+        # 预约日期
+        'atDate': tomorrow,  #这里默认为预约明天的座位
+        # 开始时间
+        'st': tomorrow + ' 08:10',
+        # 结束时间
+        'et': tomorrow + ' 22:00',
+        # 日志保存位置
+        'fileloc': '' # 需要使用绝对路径
+
+    }
+    email_info = {
+        # 邮件接收者
+        'to_user': '',
+        # 邮件发送者
+        'my_sender': '',
+        # 邮箱密码(这里是设置授权码，并不是真正的密码)
+        'my_pass': '',
+        # 配置发件人昵称
+        'my_nick': '',
+        # 配置收件人昵称
+        'to_nick': '',
+        # 邮件内容
+        'mail_msg': '''
+                    <p>尊敬的主人：<p>
+                    <p>您明天的座位已经预约完成，请您及时登录自己的账户查看哦！<p>
+                    '''
+    }
+	```
+
+3. 使用crontab进行定时运行  
+=======
     ```Python
     # 73行附近
     # 账号
@@ -48,6 +88,7 @@
     使用```chmod +x Reserve.py```修改Reserve.py的运行权限  
     
 5. 使用crontab进行定时运行  
+>>>>>>> 757ee52bb03e511a87bb82c44ea59ae3c0324a40
     使用```crontab -l```命令查看当前用户的定时任务  
     使用```crontab -e```命令编辑文件来新建任务  
     其格式为```minute (m), hour (h), day of month (dom), month (mon),and day of week (dow)， commond```, 使用```*```表示任意值
@@ -70,4 +111,9 @@
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）  
     ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
     
+<<<<<<< HEAD
+
+**有用请点星，欢迎fork**
+=======
 **有用请给个STAR，欢迎Fork**
+>>>>>>> 757ee52bb03e511a87bb82c44ea59ae3c0324a40
