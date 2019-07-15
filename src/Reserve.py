@@ -46,7 +46,7 @@ class Reserve:
                 if '提前' in reserve.text:
                     logging.warning(reserve.text)
                     continue
-                elif '冲突' in reserve.text:
+                elif '冲突' or '重复' in reserve.text:
                     # 时间和其他人有冲突，顺延下一个座位
                     logging.warning('Appointment failed, trying to reserve another seat...')
                     self.info['sid'] = str(int(self.info['sid']) + 1)
