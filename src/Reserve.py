@@ -28,28 +28,23 @@ class Reserve:
                 'X-AjaxPro-Method': 'AddOrder',
             }
             reserveUrl = 'http://libzwxt.ahnu.edu.cn/SeatWx/ajaxpro/SeatManage.Seat,SeatManage.ashx'
-            reserverData = {
-                'atDate': self.info['atDate'],
-                'sid': self.info['sid'],
-                'st': self.info['st'],
-                'et': self.info['et'],
-            }
-
+            self.set_reserveData()
             # 尝试进行预约
-            reserve = self.session.post(reserveUrl, data=json.dumps(reserverData), headers=header)
+            reserve = self.session.post(reserveUrl, data=json.dumps(self.reserveData), headers=header)
 
             while '预约成功' not in reserve.text:
                 # 预约未成功，再次尝试
-                reserve = self.session.post(reserveUrl, data=json.dumps(reserverData), headers=header)
+
+                reserve = self.session.post(reserveUrl, data=json.dumps(self.reserveData), headers=header)
 
                 # 服务器时间不一致
                 if '提前' in reserve.text:
                     logging.warning(reserve.text)
                     continue
-                elif '冲突' or '重复' in reserve.text:
+                elif '重复' or '冲突' in reserve.text:
                     # 时间和其他人有冲突，顺延下一个座位
                     logging.warning('Appointment failed, trying to reserve another seat...')
-                    self.info['sid'] = str(int(self.info['sid']) + 1)
+                    self.update_reserveData()
                     continue
 
             # 预约完成
@@ -81,6 +76,23 @@ class Reserve:
 
         if '个人中心' in login.content.decode():
             logging.info('login successfully!')
+
+    def set_reserveData(self):
+        self.reserveData = {
+            'atDate': self.info['atDate'],
+            'sid': self.info['sid'],
+            'st': self.info['st'],
+            'et': self.info['et'],
+        }
+
+    def update_reserveData(self):
+        self.info['sid'] = str(int(self.info['sid']) + 1)
+        self.reserveData = {
+            'atDate': self.info['atDate'],
+            'sid': self.info['sid'],
+            'st': self.info['st'],
+            'et': self.info['et'],
+        }
 
 
 class Email:
@@ -145,4 +157,3 @@ if __name__ == '__main__':
     success = reserve.reserve()
     if success:
         email.send()
-
