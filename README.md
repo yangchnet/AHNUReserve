@@ -1,10 +1,11 @@
 # AHNUReserve
-> 使用Python爬虫完成图书馆自动预约座位（安徽师范大学敬文图书馆）
+> 使用Python爬虫完成图书馆自动预约座位（安徽师范大学敬文图书馆(仅限花津校区)）
 
 ### 服务器部署
 服务器环境
 * Ubuntu16.04
 * Python3.5
+
 需要的Python包（一般应该都有安装, 可用```pip list```进行查看）  
 * requests
 * json
@@ -85,7 +86,7 @@
 如果你的脚本是在00：00运行，那么无需对除你的个人信息以外的其它代码进行更改；如果你将脚本运行时间设置为23:50，那么你需要把第9行的代码更改为```TOMORROW = str(datetime.date.today() + datetime.timedelta(days=2))```
 也就是将时间增加一天，意义自明。
 
-	
-	
+### windows下的部署
+使用windows提供的定时任务功能，可参考https://blog.csdn.net/xielifu/article/details/81016220 ， 这里不再详细介绍
 	
 **有用请给个STAR，欢迎Fork**
