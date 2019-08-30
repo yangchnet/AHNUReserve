@@ -81,12 +81,10 @@
 3. 点击POP3/SMTP服务后的开启（我这里已经是开启了），根据下图的提示，发送短信，获取授权码（设置为my_pass参数的值）  
     ![send message](https://github.com/yangchnet/AHNUReserve/blob/master/img/message.png?raw=true)
 
-### 获取座位id
-	> 在Chrome浏览器环境下，其他浏览器亦相差不大
-1. 在浏览器打开http://libzwxt.ahnu.edu.cn/SeatWx/
-2. 用自己的账号密码进行登录，并点击预约座位，找到自己想要预约的位置，点击预约，选择开始和结束时间后，点击立即预约
-3. 此时右击鼠标，选择```检查```，选择```Network```选项卡，选择```XHR```
-	再点击网页上的立即预约，即可看到多出一条消息，选中打开，拉到最下面，即可看到座位id
+### 部署时需要注意的一点
+如果你的脚本是在00：00运行，那么无需对除你的个人信息以外的其它代码进行更改；如果你将脚本运行时间设置为23:50，那么你需要把第9行的代码更改为```TOMORROW = str(datetime.date.today() + datetime.timedelta(days=2))```
+也就是将时间增加一天，意义自明。
+
 	
 	
 	
