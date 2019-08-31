@@ -18,14 +18,14 @@
 1. 首先使用```git clone https://github.com/yangchnet/AHNUReserve.git```把代码clone到你的服务器上
     ![clone](https://github.com/yangchnet/AHNUReserve/blob/master/img/clone.png?raw=true)
 
-2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取), 座位id获取请看[这里](#获取座位id)）  
+2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取)）  
 	```Python
 	info = {
         # 账号
         'account': '',
         # 密码
         'password': '',
-        # 座位编号（要从网页端报文查看）
+        # 座位编号（如nbz259）
         'sid': '',
         # 预约日期
         'atDate': tomorrow,  #这里默认为预约明天的座位
