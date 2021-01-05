@@ -16,8 +16,7 @@
 * logging
 
 部署步骤  
-1. 首先使用```git clone https://github.com/yangchnet/AHNUReserve.git```把代码clone到你的服务器上
-    ![clone](https://github.com/yangchnet/AHNUReserve/blob/master/img/clone.png?raw=true)
+1. 首先使用```git clone https://github.com/YourChang/AHNUReserve.git```把代码clone到你的服务器上
 
 2. 修改参数（账号密码等, 邮箱授权码的获取请看[这里](#邮箱授权码的获取)）  
 	```Python
