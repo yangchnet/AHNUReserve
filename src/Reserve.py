@@ -7,6 +7,7 @@ from email.utils import formataddr
 import logging
 
 TOMORROW = str(datetime.date.today() + datetime.timedelta(days=1))
+TODAY = str(datetime.date.today())
 
 INFO = {
     # 账号
@@ -122,9 +123,9 @@ class Reserve:
         # 开始登陆
         postUrl = 'http://libzwxt.ahnu.edu.cn/SeatWx/login.aspx'
         postData = {
-            '__VIEWSTATE': '/wEPDwULLTE0MTcxNzMyMjZkZJoL/NVYL0T+r5y3cXpfEFEzXz+dxNVtb7TlDKf8jIxz',
+            '__VIEWSTATE': '/wEPDwULLTE0MTcxNzMyMjZkZAl5GTLNAO7jkaD1B+BbDzJTZe4WiME3RzNDU4obNxXE',
             '__VIEWSTATEGENERATOR': 'F2D227C8',
-            '__EVENTVALIDATION': '/wEWBQKV1czoDALyj/OQAgKXtYSMCgKM54rGBgKj48j5D1AZa5C6Zak6btNjhoHWy1AzD9qoyayyu5qGeLnFyXKG',
+            '__EVENTVALIDATION': '/wEWBQK1odvtBQLyj/OQAgKXtYSMCgKM54rGBgKj48j5D4sJr7QMZnQ4zS9tzQuQ1arifvSWo1qu0EsBRnWwz6pw',
             'tbUserName': self.info['account'],
             'tbPassWord': self.info['password'],
             'Button1': '登 录',
